@@ -12,11 +12,21 @@ app = Flask(__name__)
 # --- CONFIGURACIÓN DE GEMINI API (¡VERSIÓN SEGURA!) ---
 API_KEY = os.environ.get("GEMINI_API_KEY")
 
+# --- CONFIGURACIÓN DE GEMINI API (VERSIÓN SEGURA) ---
+API_KEY = os.environ.get("GEMINI_API_KEY")
+
 if not API_KEY:
-    print("FATAL: La variable de entorno GEMINI_API_KEY no está configurada.")
-    print("Instrucción: Ejecute el comando 'set GEMINI_API_KEY=\"TU_CLAVE_AQUI\"' (Windows CMD) o '$env:GEMINI_API_KEY=\"TU_CLAVE_AQUI\"' (PowerShell) antes de iniciar.")
-    # Usamos una clave de ejemplo para que el código compile, pero el error es intencional si falta la clave real.
-    API_KEY = "AIzaSyCdPyLBmH3w_81mm_k_NE9755QMthBxYnY"
+    raise ValueError(
+        "ERROR: No se encontró la variable de entorno GEMINI_API_KEY.\n"
+        "En Render debes configurarla en: Settings → Environment → Add Environment Variable.\n"
+        "Clave: GEMINI_API_KEY | Valor: tu_api_key"
+    )
+
+try:
+    client = Client(api_key=API_KEY)
+except Exception as e:
+    raise RuntimeError(f"ERROR: No se pudo inicializar el cliente Gemini. Detalle: {e}")
+
 
 try:
     client = Client(api_key=API_KEY)
@@ -51,7 +61,7 @@ def generar_sugerencias():
         if not campo_solicitado or tema == 'N/A':
             return jsonify({'error': 'Faltan datos de entrada para la sugerencia (Tema, Nivel, Grado, Área).'}), 400
 
-        # Define el prompt basado en el campo
+    
         prompt = f"""
 Eres un experto en diseño curricular del MINEDU (Perú). Basado en el Tema: '{tema}', Nivel: '{nivel}', Grado: '{grado}', y Área: '{area}', genera una lista de 3 a 5 opciones de {campo_solicitado} relevantes al currículo nacional.
 
@@ -534,7 +544,7 @@ def home():
         return "Error: No se encuentra el archivo home.html.", 404
 
 if __name__ == '__main__':
-    PORT = int(os.environ.get('PORT', 5005))
+    PORT = int(os.environ.get('PORT', 5007))
     HOST = '127.0.0.1'
     app.run(debug=True, host=HOST, port=PORT)
 
