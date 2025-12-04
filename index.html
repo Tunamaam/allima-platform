@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Educativa Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar (Left) -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon"><i class="fa-solid fa-shapes"></i></div>
+                <span class="logo-text">AMAWTA</span>
+            </div>
+
+            <nav class="nav-menu">
+                <div class="nav-group">
+                    <a href="#" class="nav-item active">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Inicio</span>
+                    </a>
+                </div>
+
+                <div class="nav-label">Creación</div>
+                <div class="nav-group">
+                    <a href="#" class="nav-item">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>Herramientas</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-comments"></i>
+                        <span>Kali Chat</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-folder-open"></i>
+                        <span>Documentos</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                        <span>Salas</span>
+                    </a>
+                </div>
+
+                <div class="nav-label">Conoce más</div>
+                <div class="nav-group">
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-star"></i>
+                        <span>Referidos</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Formato escolar</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <span>Centro de ayuda</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content (Center) -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Busca herramientas o tutoriales...">
+                </div>
+
+                <div class="topbar-actions mobile-only">
+                    <!-- Mobile profile/actions if needed -->
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="content-wrapper">
+                <!-- Home View -->
+                <div id="view-home" class="view-section active">
+                    <!-- Hero Section -->
+                    <section class="hero-section">
+                        <h1>¡Hola, Maestro! <span class="wave">👋</span></h1>
+                        <p class="subtitle">¿Qué te gustaría crear hoy?</p>
+
+                        <div class="quick-actions">
+                            <a href="home.html" class="action-card primary" style="text-decoration: none; color: inherit;">
+                                <div class="card-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                                <h3>Crea tu sesión</h3>
+                                <p>Diseña clases impactantes con IA</p>
+                                <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                            </a>
+                            <div class="action-card">
+                                <div class="card-icon"><i class="fa-regular fa-file-lines"></i></div>
+                                <h3>Revisa tus documentos</h3>
+                                <p>Accede a tu historial</p>
+                            </div>
+                            <div class="action-card">
+                                <div class="card-icon"><i class="fa-regular fa-comment-dots"></i></div>
+                                <h3>Conversa con Kali</h3>
+                                <p>Tu asistente virtual</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Tools View -->
+                <div id="view-tools" class="view-section hidden">
+
+                    <!-- Tools Section -->
+                    <section class="tools-section">
+                        <div class="section-header">
+                            <h2>Nuestras herramientas</h2>
+                            <div class="filter-tabs">
+                                <button class="tab active">Todas</button>
+                                <button class="tab">Planificación</button>
+                                <button class="tab">Organización</button>
+                                <button class="tab">Evaluación</button>
+                                <button class="tab">Apoyo Visual</button>
+                                <button class="tab">Juegos</button>
+                            </div>
+                        </div>
+
+                        <div class="tools-grid">
+                            <!-- Tool Card 1 -->
+                            <div class="tool-card">
+                                <div class="tool-icon pink"><i class="fa-regular fa-image"></i></div>
+                                <div class="tool-tags">
+                                    <span class="tag">Apoyo Visual</span>
+                                    <button class="btn-fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                                <h3>Analizador de imágenes</h3>
+                                <p>Analiza las imágenes que desees con IA.</p>
+                            </div>
+
+                            <!-- Tool Card 2 -->
+                            <div class="tool-card">
+                                <div class="tool-icon purple"><i class="fa-solid fa-table-cells"></i></div>
+                                <div class="tool-tags">
+                                    <span class="tag">Juegos</span>
+                                    <button class="btn-fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                                <h3>Crucigrama</h3>
+                                <p>Crucigrama autogenerado por IA.</p>
+                            </div>
+
+                            <!-- Tool Card 3 -->
+                            <div class="tool-card">
+                                <div class="tool-icon blue"><i class="fa-solid fa-font"></i></div>
+                                <div class="tool-tags">
+                                    <span class="tag">Juegos</span>
+                                    <button class="btn-fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                                <h3>Sopa de letras</h3>
+                                <p>Sopa de letras autogenerada por IA.</p>
+                            </div>
+
+                            <!-- Tool Card 4 -->
+                            <div class="tool-card">
+                                <div class="tool-icon orange"><i class="fa-solid fa-presentation-screen"></i></div>
+                                <div class="tool-tags">
+                                    <span class="tag">Apoyo Visual</span>
+                                    <button class="btn-fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                                <h3>Presentación</h3>
+                                <p>PowerPoint generado por IA.</p>
+                            </div>
+
+                            <!-- Tool Card 5 -->
+                            <div class="tool-card">
+                                <div class="tool-icon green"><i class="fa-regular fa-file-pdf"></i></div>
+                                <div class="tool-tags">
+                                    <span class="tag">Apoyo Visual</span>
+                                    <button class="btn-fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                                <h3>Analizar PDF</h3>
+                                <p>Analiza y realiza consultas a tus documentos.</p>
+                            </div>
+
+                            <!-- Tool Card 6 -->
+                            <div class="tool-card">
+                                <div class="tool-icon red"><i class="fa-solid fa-paintbrush"></i></div>
+                                <div class="tool-tags">
+                                    <span class="tag">Apoyo Visual</span>
+                                    <button class="btn-fav"><i class="fa-regular fa-star"></i></button>
+                                </div>
+                                <h3>Ficha para colorear</h3>
+                                <p>Crear una ficha para colorear única.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Panel (Right) -->
+        <aside class="right-panel">
+            <div class="profile-header">
+                <div class="user-profile-large">
+                    <div class="avatar large">M</div>
+                    <div class="user-info">
+                        <span class="username">Maestro</span>
+                        <span class="user-role">Plan Premium</span>
+                    </div>
+                    <div class="action-icon"><i class="fa-regular fa-bell"></i></div>
+                </div>
+            </div>
+
+            
+
+            <div class="panel-section">
+                <h3><i class="fa-regular fa-star"></i> Mis Favoritos</h3>
+                <div class="favorites-list">
+                    <div class="favorite-item">
+                        <div class="fav-icon pink"><i class="fa-regular fa-image"></i></div>
+                        <div class="fav-info">
+                            <span>Analizador</span>
+                            <small>Apoyo Visual</small>
+                        </div>
+                        <button class="btn-launch"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="favorite-item">
+                        <div class="fav-icon purple"><i class="fa-solid fa-table-cells"></i></div>
+                        <div class="fav-info">
+                            <span>Crucigrama</span>
+                            <small>Juegos</small>
+                        </div>
+                        <button class="btn-launch"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="add-favorite">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Añadir acceso directo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section promo-section">
+                <div class="promo-card">
+                    <div class="promo-icon"><i class="fa-solid fa-crown"></i></div>
+                    <h4>Obtén Premium</h4>
+                    <p>Desbloquea todas las herramientas IA sin límites.</p>
+                    <button class="btn-upgrade">Mejorar Plan</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
